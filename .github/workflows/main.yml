@@ -43,4 +43,4 @@ jobs:
         # Docker build and push MySQL image
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:mysql-$MYSQL_IMAGE_TAG -f path/to/Dockerfile.mysql .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:mysql-$MYSQL_IMAGE_TAG
-        docker run -d -e DBHOST=mysql-db -e DBPORT=3306 -e DBPWD=db_pass123 -e APP_COLOR=blue -p 81:8080 --name webapp1 --link mysql-db:mysql-db
+        docker run -d -e DBHOST=mysql-db -e DBPORT=3306 -e DBPWD=db_pass123 -e APP_COLOR=blue -p 81:8080 --name webapp1 --link mysql-db:mysql-db newimage
