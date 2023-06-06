@@ -28,7 +28,6 @@ jobs:
         ECR_REPOSITORY: chanchal1-dev-ecr-repo
         APPLICATION_IMAGE_TAG: v2.1
       run: |
-        ls -ltra
       
         # Docker build and push application image
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:application-$APPLICATION_IMAGE_TAG .
